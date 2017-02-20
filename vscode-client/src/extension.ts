@@ -43,6 +43,7 @@ function startLangServerTCP(addr: number, documentSelector: string | string[]): 
 }
 
 export function activate(context: ExtensionContext) {
+	// TODO: Support more languages. 
 	context.subscriptions.push(startLangServer
 	(require("path").resolve(__dirname, '../coala-langserver.sh'), ["python"]));
 	// For Debug
